@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My First Project</title>
+    <link rel="shortcut icon" href="images/1251823.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/Style.css">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <img src="images/1251823.png" class="logo">
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>  
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="#index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#iletisim">İletisim</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#follow">Sosyal Aglar</a>
+                    </li>
+
+                    <button class="btnLogin-popup">Login</button>   
+                </ul>
+            </div> 
+        </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section>
+            <div class="content">
+                <div class="left-col">
+                    <h1>AMAZING <br> PLACE  <br>  ON EARTH </h1>
+                </div>
+                <div class="player">
+                    <div class="wrapper2">
+                        <div class="details">
+                            <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+                            <div class="track-artist">Track Artist</div>
+                        </div>
+             
+                        <div class="slider_container">
+                            <div class="current-time">00:00</div>
+                             <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                             <div class="total-duration">00:00</div>
+                        </div>
+             
+                        <div class="slider_container">
+                            <i class="fa fa-volume-down"></i>
+                             <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                             <i class="fa fa-volume-up"></i>
+                        </div>
+             
+                        <div class="buttons">
+                            <div class="random-track" onclick="randomTrack()">
+                                <i class="fas fa-random fa-2x" title="random"></i>
+                            </div>
+                            <div class="prev-track" onclick="prevTrack()">
+                                 <i class="fa fa-step-backward fa-2x"></i>
+                             </div>
+                             <div class="playpause-track" onclick="playpauseTrack()">
+                                 <i class="fa fa-play-circle fa-5x"></i>
+                             </div>
+                             <div class="next-track" onclick="nextTrack()">
+                                 <i class="fa fa-step-forward fa-2x"></i>
+                             </div>
+                             <div class="repeat-track" onclick="repeatTrack()">
+                                 <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                             </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="site-title">
+            
+            <div class="wrapper">
+                <span class="icon-close"><i class="fas fa-times"></i></span>
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me </label>
+                            <a href="#">Forgot Password ?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Dont have an account?<a href="#" class="register-link">Register</a></p>
+                        </div>
+        
+                    </form>
+                </div>
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-user"></i></span>
+                            <input type="text" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I agree to the terms & conditions</label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account ?<a href="#" class="login-link">Login</a></p>
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <audio id="mySong">
+            <source src="music/Zeli - Sharks [NCS Release].mp3" type="audio/mp3">
+        </audio>
+
+        <!------------x----------- Site Title ----------x----------->
+
+        <!-- --------------------- Blog Carousel ----------------- -->
+
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+                            <img src="./images/Blog-post/pexels-liam-gant-1414467.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <p>Amsterdam, Hollanda'nın başkenti ve en büyük şehridir. Kanalları, tarihi binaları, sanat müzeleri ve renkli gece hayatı ile ünlüdür. 
+                                   Kanallar, tarihi merkezinin çevresinde yer alır ve dünyanın en güzel kanal şebekelerinden biridir. 
+                                   Şehirde bulunan Van Gogh Müzesi ve Rijksmuseum, sanatseverlerin ziyaret etmesi gereken yerlerdir. 
+                                   Ayrıca, renkli gece hayatı ve tarihi binaları da turistlerin ilgisini çekmektedir.</p>
+                                <button class="btn btn-blog">Amsterdam</button>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="100">
+                            <img src="./images/Blog-post/pexels-mo-ismail-3763190.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <p>Dubai, Birleşik Arap Emirlikleri'nin en kalabalık ve gelişen şehridir. Şehir, yüksek gökdelenleri, yapay adaları, lüks alışveriş merkezleri, golf sahaları ve dünya standartlarında otelleriyle ünlüdür. 
+                                   Burj Khalifa, dünyanın en yüksek binasıdır ve sembolüdür. Alışveriş meraklıları için Mall of the Emirates ve Dubai Mall gibi dünya çapında ünlü alışveriş merkezleri bulunur. 
+                                   Dubai, uluslararası etkinlikler ve Dubai Festivali gibi çeşitli etkinliklere ev sahipliği yapar.</p>
+                                <button class="btn btn-blog">Dubai</button>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="100">
+                            <img src="./images/Blog-post/pexels-nicole-rathmayr-220887.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <p>London, İngiltere'nin başkenti ve en büyük şehridir. Thames Nehri üzerinde bulunmasıyla ünlüdür. 
+                                   Şehir, tarihi binaları, müzeleri, tiyatroları ve restoranları ile zengin bir kültürel yaşama sahiptir. 
+                                   London Eye, Big Ben, Tower Bridge ve Buckingham Sarayı gibi turistik yerleri vardır. Ayrıca, alışveriş merkezleri, pub'ları ve parklarıyla da bilinir. 
+                                   Londra, kültür, sanat, eğlence ve tarih dolu bir şehirdir.</p>
+                                <button class=" btn btn-blog">London</button>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+                            <img src="./images/Blog-post/pexels-zeeshaan-shabbir-14426200.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <p>New York, Amerika Birleşik Devletleri'nin en büyük şehridir. Yüksek gökdelenleri, merkezi Times Square, Central Park, 
+                                   Empire State Binası ve özgürlük heykeli gibi turistik yerleri ile ünlüdür. 
+                                   Sanat, moda, yemek ve eğlence sektörlerinde de önde gelen bir şehirdir. Broadway tiyatroları, müzeleri ve dünyaca ünlü restoranları da ilgi çeken diğer unsurlardır. 
+                                   New York, kültür, sanat ve iş dünyası açısından da önemli bir merkezdir.</p>
+                                <button class="btn btn-blog">New York</button>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+                            <img src="./images/Blog-post/pexels-pixabay-2363.jpg" alt="post-1">
+                            <div class="blog-title">
+                                <p>Paris, Fransa'nın başkenti ve en büyük şehridir. Seine Nehri kıyısında yer almasıyla ünlüdür. Tarihi binaları, müzeleri, parkları ve restoranları ile romantizm ve sanatın başkentidir. 
+                                   Eyfel Kulesi, Louvre Müzesi, Notre Dame Katedrali ve Sacré-Cœur Bazilikası gibi turistik yerleri vardır. 
+                                   Paris ayrıca moda, yemek ve kültür açısından da önemli bir merkezdir. Champs-Élysées, Montmartre ve Latin Mahallesi, şehrin en popüler bölgelerindendir.</p>
+                                <button class="btn btn-blog">Paris</button>
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="100">
+                            <img src="./images/Blog-post/pexels-burst-374870.jpg" alt="post-1">
+                            <div class="blog-title">
+                                 <p>Toronto, Kanada'nın en büyük şehridir ve Ontario eyaletinde yer alır. 
+                                    CN Kulesi, Toronto Adaları, Kensington Market, Chinatown ve Distillery District gibi turistik yerleriyle ünlüdür. 
+                                    Ayrıca, müzeleri, sanat galerileri, restoranları ve alışveriş merkezleri ile de dikkat çeker. Toronto, kültürel çeşitliliği, sanat ve eğlence etkinlikleriyle bir kültür başkentidir. 
+                                    Ayrıca, iş ve finans sektörlerinde de önemli bir merkezdir.</p>
+                                <button class="btn btn-blog">Toronto</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----------x---------- Blog Carousel --------x-------- -->
+
+        <!-- ---------------------- Site Content -------------------------->
+
+        <section>
+            <div class="containerx">
+                <div class="box">
+                  <div class="videoBx">
+                       <video src="./images/pexels-taryn-elliott-4047443-1920x1080-50fps.mp4" muted autoplay loop></video>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Blyde Nehri Kanyonu, Mpumalanga, Güney Afrika</h2>
+                      <p>Blyde River Canyon, Güney Afrika'nın Mpumalanga eyaletinde yer alan yaklaşık 26 km uzunluğunda ve 800 metre derinliğinde muhteşem bir doğal oluşumdur. 
+                        Three Rondavels, Bourke's Luck Potholes ve God's Window gibi ünlü turistik yerleri vardır. 
+                        Doğa tutkunları ve yaban hayatı fotoğrafçıları için popüler bir turistik destinasyondur.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="videoBx">
+                    <video  src="./images/pexels-mikhail-nilov-8318616-2560x1440-25fps.mp4" muted autoplay loop></video>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Antartica</h2>
+                      <p>Antarktika, dünyanın en soğuk ve en rüzgarlı bölgesidir. Antarktika'da penguenler, foklar, balinalar ve çeşitli kuş türleri gibi çok çeşitli canlılar yaşar. 
+                        Bilimsel araştırmalar için önemli bir bölge olan Antarktika'da birçok ülke araştırma istasyonları bulundurur. 
+                        Ancak, sert iklimi ve uzak konumu nedeniyle Antarktika hiçbir zaman kalıcı olarak insanlar tarafından yerleşime açılmamıştır.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="videoBx">
+                    <video  src="./images/pexels-adil-10745869-1920x1080-25fps.mp4" muted autoplay loop></video>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Cappadocia, Turkey</h2>
+                      <p>Kapadokya, yer altı şehirleri, kayalara oyulmuş evleri, kiliseleri ve benzersiz peribacaları ile ünlüdür. 
+                        Bölge ayrıca tarihi ve kültürel açıdan da zengindir. Turistik aktiviteleri arasında sıcak hava balonlarıyla yapılan turlar, vadi yürüyüşleri, at sırtında turlar ve araba kiralama yer almaktadır. 
+                        Ayrıca, bölgenin yöresel el sanatları, yerel yemekler ve şarapları da ünlüdür.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="videoBx">
+                    <video  src="./images/pexels-aric-shelby-11197364-2560x1440-30fps.mp4" muted autoplay loop></video>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Colorado nehri, ABD and  Meksika</h2>
+                      <p>Colorado Nehri, Kuzey Amerika'nın batısında bulunan bir nehir sistemidir. Nehrin kaynaklarına bağlı olarak ABD ve Meksika sınırlarından geçer. 
+                        Yaklaşık 2,330 km uzunluğa sahiptir ve Grand Canyon gibi önemli kolları vardır. Nehir, enerji üretimi, 
+                        sulama ve içme suyu sağlama amaçlarıyla kullanılır ve turistik aktiviteler için de popülerdir..</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="videoBx">
+                    <video  src="./images/pexels-adrien-jacta-4361421-3840x2160-25fps.mp4" muted autoplay loop></video>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Wadi Rum, Jordan</h2>
+                      <p>Wadi Rum, Jordan'da yer alan bir çöl vadisidir. UNESCO Dünya Mirası Listesi'nde yer alan Wadi Rum, doğal güzellikleri ve 
+                        tarihi kalıntılarıyla turistlerin ilgisini çeker. Çöl safarileri, kum kaydırağı, tırmanma ve dağcılık, at sırtında tur ve sıcak hava balonları gibi aktiviteler sunar. 
+                        Wadi Rum, Nabatean ve erken İslam dönemlerinden kalma eski tapınaklar, kaya mezarları ve petroglifler gibi tarihi kalıntılarla ünlüdür.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="videoBx">
+                    <video  src="./images/pexels-frederik-m-13659438-2560x1440-30fps.mp4" muted autoplay loop></video>
+                  </div>
+                  <div class="contentBx">
+                    <div class="content">
+                      <h2>Étretat, Normandiya</h2>
+                      <p>Étretat, Fransa'nın Normandiya bölgesinde yer alan bir sahil kasabasıdır. Beyaz kayalıkları ve pitoresk plajları ile ünlüdür. 
+                        Alabaster Sahili'nin bir parçası olan "L'Aiguille" ve "La Porte d'Aval" adlı kayalıklar kıyı boyunca yürüyüş yapmak için idealdir. 
+                        Kasaba, tarihi kiliseleri, villaları ve kaleleri ile de ilgi çekicidir.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                    <div class="videoBx">
+                      <video  src="./images/pexels-adrien-jacta-4361882-1920x1080-25fps.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="contentBx">
+                      <div class="content">
+                        <h2>Machu Picchu, Peru</h2>
+                        <p>Machu Picchu, Peru'da bulunan ünlü bir antik İnka kalesidir. 15. yüzyılda inşa edilen bu kutsal ve tarihi yer, İnka İmparatorluğu'nun merkezlerinden biriydi. 
+                           Taş bloklarla yapılmış sağlam mimarisi ve muhteşem manzarasıyla dikkat çeken Machu Picchu, arkeolog Hiram Bingham tarafından 1911 yılında yeniden keşfedilmiştir. 
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="videoBx">
+                      <video  src="./images/pexels-silent-sightseer-11719472-3840x2160-30fps.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="contentBx">
+                      <div class="content">
+                        <h2>Phi Phi Adaları, Tayland</h2>
+                        <p>Phi Phi Don, adaların en büyüğü ve yerleşim alanıdır. Kumsalları beyaz kumlu ve turkuaz suları, doğal güzellikleri, berrak suları, renkli mercan resifleri ve tropikal balıklarıyla ünlüdür.
+                           Phi Phi Leh ise doğal güzellikleriyle ünlüdür. Viking Mağarası ve Maya Koyu gibi önemli turistik yerlere ev sahipliği yapar. Maya Koyu, turkuaz suları ve dik kaya sütunlarıyla ünlüdür.
+                        </p>
+                      </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="videoBx">
+                      <video  src="./images/pexels-ibrahim-bennett-15184958-1280x720-30fps.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="contentBx">
+                      <div class="content">
+                        <h2>Genting Yaylaları, Malezya</h2>
+                        <p>Genting Yaylası, Malezya'nın başkenti Kuala Lumpur'un yaklaşık 50 kilometre kuzeyinde bulunan bir dağlık bölgedir.
+                           Yayla, 1.800 metre yükseklikteki Titiwangsa Dağları'nda yer almaktadır ve serin iklimi ve muhteşem manzaralarıyla ünlüdür. Genting Yaylası, yeşilliklerle kaplı tepeleri, sisli atmosferi ve üstündeki bulutlarla birlikte büyüleyici bir ortam sunar.
+                           Genting Skyway adı verilen teleferik, ziyaretçileri yaylaya taşırken muhteşem manzaralar sunar.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        
+          
+          
+            
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+
+    
+    </main>
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>Hakkımızda</h2>
+                <p>Dünya üzerinde seyahat edilebilecek yerleri gösteriyoruz.</p>
+            </div>
+            <div class id="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Bizi Takip Edin</h2>
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class id="iletisim"data-aos="fade-left" data-aos-delay="200">
+                <h2>İletisim</h2>
+                <a href="#">+90 (000) 000 00 00</a>
+            </div>
+        </div>
+        
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+    </footer>
+
+    <script src="./js/Jquery3.4.1.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/aos.js"></script> 
+    <script src="./js/main.js"></script>
+    
+</body>
+
+</html>
